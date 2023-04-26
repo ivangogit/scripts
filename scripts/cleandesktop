@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# navigate to the desktop directory
+cd ~/Desktop
+
+# remove all files and directories except setup.png, *Diagram*, and Trash
+sudo find . ! -name 'setup.png' ! -name '*Diagram*' ! -name 'Trash' -mindepth 1 -delete
+
+# empty the trash can
+sudo rm -rf ~/.local/share/Trash/*
